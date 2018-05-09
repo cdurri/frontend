@@ -1,0 +1,37 @@
+.button-outline {
+  @extend .flex-center;
+  position: relative;
+  color: $c-white;
+  text-decoration: none;
+  border: 2px solid $c-white;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+  &:before {
+    @extend .transition-all;
+    @extend .absolute-full;
+    content: '';
+    background: $c-white;
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+  &:hover {
+    color: $c-black;
+    @include mediaquery('medium') {
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+  @include mediaquery('small') {
+    max-width: 125px;
+    padding: 10px 0;
+  }
+  @include mediaquery('medium') {
+    max-width: 200px;
+    padding: 12px 0;
+  }
+  @include mediaquery('large') {
+    max-width: 220px;
+  }
+}

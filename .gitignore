@@ -1,0 +1,5 @@
+.gulp/
+
+node_modules/
+
+.npmrc

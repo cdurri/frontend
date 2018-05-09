@@ -1,0 +1,141 @@
+body, html {
+    height: 100%;
+    position: relative;
+}
+
+.age-gate {
+  @extend .bg-cover;
+  @extend .flex-center;
+}
+
+.age-modal {
+  background: $c-white;
+  text-align: center;
+  border-radius: 10px;
+  @include mediaquery('small') {
+    width: 300px;
+    padding: 10px;
+  }
+  @include mediaquery('medium') {
+    width: 520px;
+    padding: 12px;
+  }
+  @include mediaquery('large') {
+    width: 640px;
+    padding: 15px;
+  }
+}
+
+.age-modal__logo {
+  @include mediaquery('small') {
+    padding-bottom: 10px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 15px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 20px;
+  }
+}
+
+.age-modal__intro {
+  @include mediaquery('small') {
+    padding-bottom: 5px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 10px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 15px;
+  }
+}
+
+.age-gate__direction {
+  @include mediaquery('small') {
+    padding-bottom: 10px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 15px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 20px;
+  }
+}
+
+.age-gate__divider {
+  border: 0;
+  height: 2.5px;
+  background-color: $c-black;
+  @include mediaquery('small') {
+    margin-bottom: 5px;
+  }
+  @include mediaquery('medium') {
+    margin-bottom: 10px;
+  }
+  @include mediaquery('large') {
+    margin-bottom: 15px;
+  }
+}
+
+.age-gate__sub-heading {
+  @include mediaquery('small') {
+    padding-bottom: 5px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 10px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 15px;
+  }
+}
+
+.age-gate__select {
+  @include mediaquery('small') {
+    padding: 3px;
+  }
+  @include mediaquery('medium') {
+    padding: 4px;
+  }
+  @include mediaquery('large') {
+    padding: 5px;
+  }
+}
+
+.age-gate__disclaimer {
+  span {
+    text-decoration: underline;
+  }
+  @include mediaquery('small') {
+    padding-bottom: 7px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 11px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 16px;
+  }
+}
+
+.age-gate__cookie {
+  @include mediaquery('small') {
+    padding-bottom: 8px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 12px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 17px;
+  }
+}
+
+.age-gate__button {
+  @include mediaquery('small') {
+    padding-bottom: 25px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 30px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 40px;
+  }
+}

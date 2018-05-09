@@ -1,0 +1,183 @@
+.contact-intro__wrapper {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact {
+  margin: 0 auto;
+  @include mediaquery('small') {
+    max-width: 320px;
+    padding-top: 40px;
+  }
+  @include mediaquery('medium') {
+    max-width: 500px;
+    padding-top: 50px;
+  }
+  @include mediaquery('large') {
+      max-width: 700px;
+      padding-top: 60px;
+  }
+}
+
+.contact__title {
+  &:after {
+    content: "";
+    display: block;
+    background-color: $c-peach;
+    height: 2px;
+    @include mediaquery('small') {
+      width: 220px;
+      margin: 10px auto 0;
+    }
+    @include mediaquery('medium') {
+      width: 250px;
+      margin: 15px auto 0;
+    }
+    @include mediaquery('large') {
+      width: 280px;
+      margin: 20px auto 0;
+    }
+  }
+  @include mediaquery('small') {
+    padding-bottom: 30px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 40px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 50px;
+  }
+}
+
+.contact__intro {
+  @include mediaquery('small') {
+    padding-bottom: 20px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 30px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 40px;
+  }
+}
+
+input[type=text] {
+  border: 1px solid $c-gray;
+  border-radius: 0;
+  @include mediaquery('small') {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 10px;
+  }
+  @include mediaquery('medium') {
+    width: 48%;
+    margin-bottom: 12px;
+    padding: 14px 12px;
+  }
+  @include mediaquery('large') {
+    margin-bottom: 18px;
+    padding: 15px 13px;
+  }
+}
+
+select {
+  border: 1px solid $c-gray;
+  @include mediaquery('small') {
+    width: 30%;
+    margin-bottom: 10px;
+    padding: 12px 10px;
+  }
+  @include mediaquery('medium') {
+    width: 15%;
+    margin-bottom: 12px;
+    padding: 14px 12px;
+  }
+  @include mediaquery('large') {
+    margin-bottom: 18px;
+    padding: 15px 13px;
+  }
+}
+
+input[type=email] {
+  border: 1px solid $c-gray;
+  border-radius: 0;
+  @include mediaquery('small') {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 10px;
+  }
+  @include mediaquery('medium') {
+    width: 48%;
+    margin-bottom: 12px;
+    padding: 14px 12px;
+  }
+  @include mediaquery('large') {
+    margin-bottom: 18px;
+    padding: 15px 13px;
+  }
+}
+
+textarea {
+  border: 1px solid $c-gray;
+  border-radius: 0;
+  resize: none;
+  @include mediaquery('small') {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 10px;
+  }
+  @include mediaquery('medium') {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 14px 12px;
+  }
+  @include mediaquery('large') {
+    margin-bottom: 18px;
+    padding: 15px 13px;
+  }
+}
+
+input[type=submit] {
+  @extend .flex-center;
+  color: $c-black;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid $c-gray;
+  margin: 0 auto;
+  cursor: pointer;
+  @include mediaquery('small') {
+    width: 125px;
+    padding: 10px 0;
+  }
+  @include mediaquery('medium') {
+    width: 150px;
+    padding: 12px 0;
+  }
+  @include mediaquery('large') {
+    width: 175px;
+  }
+}
+
+input[type=checkbox] {
+  @include mediaquery('small') {
+    padding-bottom: 10px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 15px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 20px;
+  }
+}
+
+.contact__conditions {
+  @include mediaquery('small') {
+    padding-bottom: 20px;
+  }
+  @include mediaquery('medium') {
+    padding-bottom: 30px;
+  }
+  @include mediaquery('large') {
+    padding-bottom: 40px;
+  }
+}

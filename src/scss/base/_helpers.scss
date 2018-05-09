@@ -1,0 +1,55 @@
+// Media queries
+
+@mixin mediaquery($break) {
+  @if $break == "small" {
+    @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $breakpoint-m + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $breakpoint-l) {
+      @content;
+    }
+  }
+  @else {
+    @error "No value of `#{$break}` found.";
+  }
+}
+
+// Extends
+
+.absolute-full {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bg-cover {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
