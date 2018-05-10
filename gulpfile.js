@@ -13,39 +13,23 @@ sourcemaps = require('gulp-sourcemaps');
 
 gulp.task("concatScripts", function() {
   return gulp.src('sections/**/*.js')
-      .pipe(sourcemaps.init())
-      .pipe(babel({
-        presets: ['es2015']
-      }))
-      .on('error', function(e) {
-        console.log('>>> ERROR', e);
-        // emit here
-        this.emit('end');
-      })
       .pipe(concat("main.js"))
       .pipe(gulp.dest("src/js"));
 });
 
 gulp.task("minifyScripts", ["concatScripts"], function() {
   return gulp.src("src/js/main.js")
-      .pipe(uglify())
-      .pipe(rename('main.min.js'))
-      .pipe(gulp.dest("assets/js"));
-});
-
-/*gulp.task('es6', ["concatScripts"] function() {
-  return gulp.src('src/js/main.js')
       .pipe(sourcemaps.init())
-      .pipe(babel({
-        presets: ['es2015']
-      }))
+      .pipe(babel())
       .on('error', function(e) {
         console.log('>>> ERROR', e);
         // emit here
         this.emit('end');
       })
-      .pipe(gulp.dest('src/js'));
-});*/
+      .pipe(uglify())
+      .pipe(rename('main.min.js'))
+      .pipe(gulp.dest("assets/js"));
+});
 
 gulp.task('compileSass', function() {
   return gulp.src("src/scss/main.scss")

@@ -33,4 +33,14 @@ document.querySelector(".age-gate__enter").addEventListener("click", function( e
    }
 });
 
+// Expression placeholder
+var developer = 'Dennis Gaebel';
 
+console.log(`Yo! My name is ${developer}!`);
+
+// Expressions w/object literal
+var author = {
+    name: 'Gray Ghost Visuals'
+};
+
+console.log(`Thanks for writing awesome articles, ${author.name}.`);
