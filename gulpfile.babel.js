@@ -1,16 +1,5 @@
 'use strict';
 
-/*var gulp = require('gulp'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-      sass = require('gulp-sass'),
-    minify = require('gulp-clean-css'),
-       del = require('del'),
-   tinypng = require('gulp-tinypng'),
-     babel = require('gulp-babel'),
-sourcemaps = require('gulp-sourcemaps');*/
-
 import gulp from 'gulp';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
