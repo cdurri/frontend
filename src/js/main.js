@@ -1,36 +1,42 @@
-var day, month, year, age = 18, selectedDate, currentDate;
+let day, month, year, selectedDate, currentDate;
+const age = 18;
 
-const testOne = 1;
+const fullUrl = window.location.href;
+const endUrl = fullUrl.split('/').pop();
 
-var fullUrl = window.location.href;
-var endUrl = fullUrl.split('/').pop();
-
-if(endUrl == 'index.html' && location.hash !== 'loaded') {
-  location.hash = 'loaded';
-  window.location.assign('age-gate.html');
+const checkUrl = () => {
+  if(endUrl == 'index.html' && location.hash !== 'loaded') {
+    location.hash = 'loaded';
+    window.location.assign('age-gate.html');
+  }
 }
 
-document.querySelector(".age-gate__enter").addEventListener("click", function( event ) {
-  event.preventDefault();
+const checkAge = () => {
+    document.querySelector(".age-gate__enter").addEventListener("click", event => {
+    event.preventDefault();
 
-    day = document.getElementById('age-gate__day');
-  month = document.getElementById('age-gate__month');
-   year = document.getElementById('age-gate__year');
+      day = document.getElementById('age-gate__day');
+    month = document.getElementById('age-gate__month');
+     year = document.getElementById('age-gate__year');
 
-   selectedDate = new Date();
-   selectedDate.setFullYear( year.value, month.value - 1, day.value );
-   currentDate = new Date();
-   currentDate.setFullYear(currentDate.getFullYear() - age);
+     selectedDate = new Date();
+     selectedDate.setFullYear( year.value, month.value - 1, day.value );
+     currentDate = new Date();
+     currentDate.setFullYear(currentDate.getFullYear() - age);
 
-   if( day.value == 'notselected' || month.value == 'notselected' || year.value == 'notselected' ) {
-     alert('Please enter your date of birth');
-     return false;
-   } else if ((currentDate - selectedDate) < 0) {
-     alert('Entry denied, currently you are not of legal drinking age');
-     return false;
-   } else {
-     window.location.assign("index.html#loaded");
-   }
-});
+     if( day.value == 'notselected' || month.value == 'notselected' || year.value == 'notselected' ) {
+       alert('Please enter your date of birth');
+       return false;
+     } else if ((currentDate - selectedDate) < 0) {
+       alert('Entry denied, currently you are not of legal drinking age');
+       return false;
+     } else {
+       window.location.assign("index.html#loaded");
+     }
+  });
+}
+
+checkUrl();
+checkAge();
 
 
