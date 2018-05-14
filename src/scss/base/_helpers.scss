@@ -7,7 +7,7 @@
     }
   }
   @else if $break == "medium" {
-    @media (min-width: $breakpoint-m + 1) {
+    @media (min-width: $breakpoint-m) {
       @content;
     }
   }

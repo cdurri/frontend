@@ -1,33 +1,71 @@
-.header__container {
+.header__container,
+.header__phone,
+.header__nav-links {
   display: flex;
-  justify-content: space-between;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+}
+
+.header__container {
   color: $c-white;
   height: 40px;
   width: 100%;
   background: black;
-  padding: 10px 50px;
+  @include mediaquery('small') {
+    padding: .625rem 1.25rem;
+  }
+  @include mediaquery('medium') {
+    padding: .625rem 2.5rem;
+  }
+  @include mediaquery('large') {
+    padding: .625rem 5rem;
+  }
+}
+
+.header__menu {
+  margin-right: auto;
 }
 
 .header__phone {
-  display: flex;
+  @extend .flex-center;
+  @include mediaquery('small') {
+    margin-left: 1rem;
+  }
+  @include mediaquery('medium') {
+    margin-right: 1.25rem;
+  }
+  @include mediaquery('large') {
+    margin-right: 1.75rem;
+  }
+}
+
+.header__phone-image {
+  @include mediaquery('small') {
+    width: 14px;
+  }
+  @include mediaquery('medium') {
+    width: 16px;
+  }
 }
 
 .header__phone-number {
   @include mediaquery('small') {
-    margin-left: 5px;
+    margin-left: .3125rem;
   }
   @include mediaquery('medium') {
-    margin-left: 10px;
+    margin-left: .625rem;
   }
   @include mediaquery('large') {
-    margin-left: 20px;
+    margin-left: .875rem;
   }
 }
 
 .header__nav-links {
-  display: flex;
   list-style-type: none;
   li {
-    margin-left: 10px;
+    margin-left: .625rem;
   }
 }
