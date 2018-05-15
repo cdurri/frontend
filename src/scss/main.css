@@ -9,7 +9,7 @@ form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, a
 * {
   box-sizing: border-box; }
 
-.absolute-full, .button-outline:before {
+.absolute-full, .button-outline:before, .hero__content {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -621,17 +621,18 @@ input[type=submit] {
   .header__nav-links li {
     margin-left: .625rem; }
 
-@media (min-width: 1px) and (max-width: 600px) {
-  .hero {
-    min-height: 200px; } }
-
-@media (min-width: 600px) {
-  .hero {
-    min-height: 400px; } }
-
-@media (min-width: 1000px) {
-  .hero {
-    min-height: 728px; } }
+.hero {
+  position: relative;
+  width: 100%; }
+  @media (min-width: 1px) and (max-width: 600px) {
+    .hero {
+      padding-top: 165%; } }
+  @media (min-width: 600px) {
+    .hero {
+      padding-top: 100%; } }
+  @media (min-width: 1000px) {
+    .hero {
+      padding-top: 72.5%; } }
 
 .hero__content {
   text-align: center;
@@ -652,6 +653,7 @@ input[type=submit] {
 @media (min-width: 1px) and (max-width: 600px) {
   .hero__logo {
     width: 125px;
+    padding-top: 20px;
     padding-bottom: 30px; } }
 
 @media (min-width: 600px) {

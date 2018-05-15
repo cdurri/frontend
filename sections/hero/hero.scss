@@ -1,17 +1,20 @@
 .hero {
   @extend .bg-cover;
+  position: relative;
+  width: 100%;
   @include mediaquery('small') {
-    min-height: 200px;
+    padding-top: 165%;
   }
   @include mediaquery('medium') {
-    min-height: 400px;
+    padding-top: 100%;
   }
   @include mediaquery('large') {
-    min-height: 728px;
+    padding-top: 72.5%;
   }
 }
 
 .hero__content {
+  @extend .absolute-full;
   text-align: center;
   margin: 0 auto;
   @include mediaquery('small') {
@@ -31,6 +34,7 @@
 .hero__logo {
   @include mediaquery('small') {
     width: 125px;
+    padding-top: 20px;
     padding-bottom: 30px;
   }
   @include mediaquery('medium') {
