@@ -11,6 +11,12 @@
   @include mediaquery('large') {
     padding-top: 72.5%;
   }
+  @include mediaquery('extra-large') {
+    padding-top: 62.5%;
+  }
+  @include mediaquery('extra-extra-large') {
+    padding-top: 52%;
+  }
 }
 
 .hero__content {

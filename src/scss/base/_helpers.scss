@@ -16,6 +16,16 @@
       @content;
     }
   }
+  @else if $break == "extra-large" {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+  @else if $break == "extra-extra-large" {
+    @media (min-width: $breakpoint-xxl) {
+      @content;
+    }
+  }
   @else {
     @error "No value of `#{$break}` found.";
   }

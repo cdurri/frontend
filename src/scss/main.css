@@ -633,6 +633,12 @@ input[type=submit] {
   @media (min-width: 1000px) {
     .hero {
       padding-top: 72.5%; } }
+  @media (min-width: 1200px) {
+    .hero {
+      padding-top: 62.5%; } }
+  @media (min-width: 1440px) {
+    .hero {
+      padding-top: 52%; } }
 
 .hero__content {
   text-align: center;
