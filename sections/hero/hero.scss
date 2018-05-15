@@ -1,5 +1,6 @@
 .hero {
   @extend .bg-cover;
+  background-attachment: fixed;
   position: relative;
   width: 100%;
   @include mediaquery('small') {

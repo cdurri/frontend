@@ -622,6 +622,7 @@ input[type=submit] {
     margin-left: .625rem; }
 
 .hero {
+  background-attachment: fixed;
   position: relative;
   width: 100%; }
   @media (min-width: 1px) and (max-width: 599px) {
