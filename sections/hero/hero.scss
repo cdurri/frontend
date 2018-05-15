@@ -3,19 +3,19 @@
   position: relative;
   width: 100%;
   @include mediaquery('small') {
-    padding-top: 165%;
+    @include ratio(320, 550);
   }
   @include mediaquery('medium') {
-    padding-top: 100%;
+    @include ratio(600, 625);
   }
   @include mediaquery('large') {
-    padding-top: 72.5%;
+    @include ratio(1000, 725);
   }
   @include mediaquery('extra-large') {
-    padding-top: 62.5%;
+    @include ratio(1200, 750);
   }
   @include mediaquery('extra-extra-large') {
-    padding-top: 52%;
+    @include ratio(1440, 800);
   }
 }
 

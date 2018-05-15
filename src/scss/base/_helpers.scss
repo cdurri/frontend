@@ -2,7 +2,7 @@
 
 @mixin mediaquery($break) {
   @if $break == "small" {
-    @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m) {
+    @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m - 1) {
       @content;
     }
   }
@@ -28,6 +28,17 @@
   }
   @else {
     @error "No value of `#{$break}` found.";
+  }
+}
+
+// Aspect ratio 
+
+@mixin ratio( $width: 1, $height: 1, $type: before) {
+  &:#{$type} {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: percentage( $height / $width);
   }
 }
 
