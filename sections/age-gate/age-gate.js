@@ -12,28 +12,31 @@ const checkUrl = () => {
 }
 
 const checkAge = () => {
-    document.querySelector(".age-gate__enter").addEventListener("click", event => {
-    event.preventDefault();
+    const enterBtn = document.querySelector(".age-gate__enter");
+    if(enterBtn) {
+        enterBtn.addEventListener("click", event => {
+        event.preventDefault();
 
-      day = document.getElementById('age-gate__day');
-    month = document.getElementById('age-gate__month');
-     year = document.getElementById('age-gate__year');
+          day = document.getElementById('age-gate__day');
+        month = document.getElementById('age-gate__month');
+         year = document.getElementById('age-gate__year');
 
-     selectedDate = new Date();
-     selectedDate.setFullYear( year.value, month.value - 1, day.value );
-     currentDate = new Date();
-     currentDate.setFullYear(currentDate.getFullYear() - age);
+         selectedDate = new Date();
+         selectedDate.setFullYear( year.value, month.value - 1, day.value );
+         currentDate = new Date();
+         currentDate.setFullYear(currentDate.getFullYear() - age);
 
-     if( day.value == 'notselected' || month.value == 'notselected' || year.value == 'notselected' ) {
-       alert('Please enter your date of birth');
-       return false;
-     } else if ((currentDate - selectedDate) < 0) {
-       alert('Entry denied, currently you are not of legal drinking age');
-       return false;
-     } else {
-       window.location.assign("index.html#loaded");
-     }
-  });
+         if( day.value == 'notselected' || month.value == 'notselected' || year.value == 'notselected' ) {
+           alert('Please enter your date of birth');
+           return false;
+         } else if ((currentDate - selectedDate) < 0) {
+           alert('Entry denied, currently you are not of legal drinking age');
+           return false;
+         } else {
+           window.location.assign("index.html#loaded");
+         }
+      });
+    }
 }
 
 checkUrl();

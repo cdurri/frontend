@@ -749,6 +749,9 @@ input[type=submit] {
   .hero__scroll {
     padding-bottom: 20px; } }
 
+#hero__scroll-down {
+  cursor: pointer; }
+
 .info-drink {
   text-align: center;
   margin: 0 auto; }
