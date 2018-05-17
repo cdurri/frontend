@@ -654,7 +654,7 @@ input[type=submit] {
       content: '';
       display: block;
       width: 100%;
-      padding-top: 55.55556%; } }
+      padding-top: 53.81944%; } }
 
 .hero__content {
   text-align: center;
@@ -737,20 +737,45 @@ input[type=submit] {
     .hero__tag {
       padding-bottom: 35px; } }
 
-@media (min-width: 1px) and (max-width: 599px) {
-  .hero__scroll {
-    padding-bottom: 10px; } }
-
-@media (min-width: 600px) {
-  .hero__scroll {
-    padding-bottom: 15px; } }
-
-@media (min-width: 1000px) {
-  .hero__scroll {
-    padding-bottom: 20px; } }
+.hero__scroll {
+  position: relative;
+  animation: arrowmove 1s infinite ease-in 5s; }
+  @media (min-width: 1px) and (max-width: 599px) {
+    .hero__scroll {
+      padding-bottom: 10px; } }
+  @media (min-width: 600px) {
+    .hero__scroll {
+      padding-bottom: 15px; } }
+  @media (min-width: 1000px) {
+    .hero__scroll {
+      padding-bottom: 20px; } }
 
 #hero__scroll-down {
   cursor: pointer; }
+
+@-webkit-keyframes arrowmove {
+  from {
+    top: 0px; }
+  to {
+    top: 14px; } }
+
+@-moz-keyframes arrowmove {
+  from {
+    top: 0px; }
+  to {
+    top: 14px; } }
+
+@-o-keyframes arrowmove {
+  from {
+    top: 0px; }
+  to {
+    top: 14px; } }
+
+@-ms-keyframes arrowmove {
+  from {
+    top: 0px; }
+  to {
+    top: 14px; } }
 
 .info-drink {
   text-align: center;

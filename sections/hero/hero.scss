@@ -16,7 +16,7 @@
     @include ratio(1200, 750);
   }
   @include mediaquery('extra-extra-large') {
-    @include ratio(1440, 800);
+    @include ratio(1440, 775);
   }
 }
 
@@ -107,6 +107,8 @@
 }
 
 .hero__scroll {
+  position: relative;
+  animation: arrowmove 1s infinite ease-in 5s;
   @include mediaquery('small') {
     padding-bottom: 10px;
   }
@@ -120,4 +122,44 @@
 
 #hero__scroll-down {
   cursor: pointer;
+}
+
+// Chrome, Safari
+@-webkit-keyframes arrowmove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 14px;
+  }
+}
+
+// Firefox
+@-moz-keyframes arrowmove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 14px;
+  }
+}
+
+// Opera
+@-o-keyframes arrowmove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 14px;
+  }
+}
+
+// Internet Explorer
+@-ms-keyframes arrowmove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 14px;
+  }
 }
