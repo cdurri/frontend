@@ -1,4 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ */
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -39,7 +41,8 @@ form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, a
   position: relative;
   color: #FFFFFF;
   text-decoration: none;
-  border: 2px solid #FFFFFF;
+  text-transform: uppercase;
+  border: 1.5px solid #FFFFFF;
   margin: 0 auto;
   overflow: hidden;
   z-index: 1; }
@@ -172,6 +175,17 @@ form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, a
   @media (min-width: 1000px) {
     .footer-links {
       font-size: .875rem; } }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600; }
+
+p {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400; }
+
+.button-outline {
+  font-family: 'Open Sans', sans-serif; }
 
 body, html {
   height: 100%;
@@ -689,8 +703,7 @@ input[type=submit] {
     padding-bottom: 50px; } }
 
 .hero__title {
-  color: #FFFFFF;
-  font-family: Times, serif; }
+  color: #FFFFFF; }
   @media (min-width: 1px) and (max-width: 599px) {
     .hero__title {
       padding-bottom: 40px; } }

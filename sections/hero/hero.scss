@@ -56,7 +56,6 @@
 
 .hero__title {
   color: $c-white;
-  font-family: $f-times;
   @include mediaquery('small') {
     padding-bottom: 40px;
   }
